@@ -17,9 +17,7 @@ public class HomeService {
 	{
 		String greeting = "";
 		
-		if (hour < 5) {
-			greeting = "こんばんは";
-		} else if (hour < 12) {
+		if (hour < 12) {
 			greeting = "おはよう";
 		} else if (hour < 18) {
 			greeting = "こんにちは";

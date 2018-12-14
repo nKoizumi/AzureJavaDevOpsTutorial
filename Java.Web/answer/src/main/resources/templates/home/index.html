@@ -3,17 +3,35 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Index</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"></link>
 </head>
 <body>
-	<div>
-		<table>
-			<tr th:each="blog : ${blogs}" th:object="${blog}">
-				<td th:text="*{name}">name</td>
-				<td th:text="*{author}">author</td>
-			</tr>
-		</table>	
+  <div class="animate two">
+    <span>A</span><span>z</span><span>u</span><span>r</span><span>e </span>
+    <span>J</span><span>u</span><span>m</span><span>p </span>
+    <span>S</span><span>t</span><span>a</span><span>r</span><span>t</span><span>!</span>
+      <table>
+        <tr th:each="blog : ${blogs}" th:object="${blog}">
+          <td th:text="*{name}">name</td>
+          <td th:text="*{author}">author</td>
+        </tr>
+      </table>
+    <div class="menu-area">
+      <a href="#popup1"><button type="button" class="square-btn">About</button></a>
+      <a href="/contact" th:href="@{/contact}"><button type="button" class="square-btn">Contact</button></a>
+    </div>
 	</div>
-	
-	<a href="/home/contact" th:href="@{/home/contact}">Contact</a>
+
+  <!-- Modal window -->
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>About</h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        Azure Jump Start!
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

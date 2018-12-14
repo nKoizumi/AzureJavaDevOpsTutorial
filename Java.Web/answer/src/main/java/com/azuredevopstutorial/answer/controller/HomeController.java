@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.azuredevopstutorial.answer.model.Blog;
 import com.azuredevopstutorial.answer.service.HomeService;
 
+import com.microsoft.applicationinsights.TelemetryClient;
+
 @Controller
 public class HomeController {
 
 	@Autowired
 	HomeService service;
 	
-	@GetMapping("/home/index")
+	private TelemetryClient telemetry = new TelemetryClient();
+
+	@GetMapping("/")
 	String index(Model model) {
 		 if (service.getBlog().size() == 0) {
 			Blog blog = new Blog();
@@ -30,7 +34,7 @@ public class HomeController {
 		return "home/index";
 	}
 	
-	@GetMapping("home/contact")
+	@GetMapping("/contact")
 	String contact(Model model) {
 		if (1 == 1) throw new RuntimeException();
 		return "home/contact";
