@@ -24,7 +24,7 @@ public class AnswerApplicationTests {
 		String actual = service.greet(11);
 		
 		// Assert
-		assertThat(actual, is("おはよう"));
+		assertThat(actual, is("Good morning!"));
 	}
 	
 	@Test
@@ -33,7 +33,7 @@ public class AnswerApplicationTests {
 		String actual = service.greet(12);
 		
 		// Assert
-		assertThat(actual, is("こんにちは"));
+		assertThat(actual, is("Good afternoon!"));
 	}
 	
 	@Test
@@ -42,7 +42,7 @@ public class AnswerApplicationTests {
 		String actual = service.greet(18);
 		
 		// Assert
-		assertThat(actual, is("こんばんは"));
+		assertThat(actual, is("Good evening!"));
 	}
 	
 }

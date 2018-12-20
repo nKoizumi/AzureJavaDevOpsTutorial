@@ -18,11 +18,11 @@ public class HomeService {
 		String greeting = "";
 		
 		if (hour < 12) {
-			greeting = "おはよう";
+			greeting = "Good morning!";
 		} else if (hour < 18) {
-			greeting = "こんにちは";
+			greeting = "Good afternoon!";
 		} else {
-			greeting = "こんばんは";
+			greeting = "Good evening!";
 		}
 		return greeting;
 	}
