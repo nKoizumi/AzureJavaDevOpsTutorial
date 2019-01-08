@@ -36,6 +36,7 @@ public class HomeController {
 	
 	@GetMapping("/contact")
 	String contact(Model model) {
+		// telemetry.trackEvent("カスタムログ");
 		if (1 == 1) throw new RuntimeException();
 		return "home/contact";
 	}

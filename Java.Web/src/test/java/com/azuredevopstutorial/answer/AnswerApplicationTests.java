@@ -45,4 +45,13 @@ public class AnswerApplicationTests {
 		assertThat(actual, is("Good evening!"));
 	}
 	
+    // @Test
+    // public void greet_2_goodevening() {
+    //     // Arrange・Act
+    //     String actual = service.greet(2);
+    //
+    //     // Assert
+    //     assertThat(actual, is("Good evening!"));
+    // }
+
 }

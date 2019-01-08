@@ -24,3 +24,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Visual Studio & VS Code cache/options directory
+.vs/
+.vscode/
